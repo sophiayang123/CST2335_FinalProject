@@ -18,6 +18,8 @@ public class MainActivity extends AppCompatActivity {
 
     private void showNormalDialog() {
         final AlertDialog.Builder normalDialog = new AlertDialog.Builder(MainActivity.this);
-        normalDialog.setIcon()
+        normalDialog.setTitle("I am a dialog");
+        normalDialog.setMessage("Which button you want to click?");
+        normalDialog.setPositiveButton();
     }
 }
