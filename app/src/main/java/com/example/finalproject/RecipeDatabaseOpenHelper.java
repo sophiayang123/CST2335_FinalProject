@@ -5,12 +5,16 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
+import java.sql.Blob;
+
 public class RecipeDatabaseOpenHelper extends SQLiteOpenHelper {
     public static final String DATABASE_NAME = "RecipeDatabaseFile";
     public static final int VERSOPM_NUM = 1;
-    public static final String TABLE_NAME = "Contacts";
+    public static final String TABLE_NAME = "LovedRecipe";
     public static final String COL_ID = "_id";
-    public static final String COL_NAME = "RECIPE_NAME";
+    public static final String COL_NAME = "NAME";
+    public static final String COL_URL = "URL";
+    public static final String COL_IMAGE = "IMAGE";
 
     public RecipeDatabaseOpenHelper(Activity ctx){
         super(ctx, DATABASE_NAME, null, VERSOPM_NUM);
@@ -20,7 +24,7 @@ public class RecipeDatabaseOpenHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("CREATE TABLE " + TABLE_NAME + "( "
                 + COL_ID +" INTEGER PRIMARY KEY AUTOINCREMENT,"
-                + COL_NAME );
+                + COL_NAME + " TEXT, "+ COL_URL + " TEXT, " + COL_IMAGE  + " Blob)" );
     }
 
     @Override
