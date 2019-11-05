@@ -10,6 +10,8 @@ import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.Toast;
 
 public class MainRecipeActivity extends AppCompatActivity {
@@ -25,6 +27,7 @@ public class MainRecipeActivity extends AppCompatActivity {
                 openDialog();
             }
         });
+        ListView listView = (ListView) findViewById(R.id.restaurant_listview);
 
         Toast toast=Toast.makeText(getApplicationContext(),"Welcome!",Toast.LENGTH_SHORT);
         toast.setMargin(50,50);
