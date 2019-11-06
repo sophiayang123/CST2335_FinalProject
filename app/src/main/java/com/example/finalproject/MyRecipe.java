@@ -6,16 +6,20 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MyRecipe {
     protected long id;
-    protected String URL;
-    protected String TITLE;
-    protected boolean favourite;
+    protected static String URL;
+    protected static String TITLE;
+    protected static byte[] IMAGE;
 
-    public MyRecipe(String title, 0){
-
+    public MyRecipe(String title, String URL, byte[] IMAHE){
+        this(title, URL, IMAGE, 0);
     }
 
-    public MyRecipe(String title, long id){
+    public MyRecipe(String title, String URL, byte[] IMAHE, long id){
         this.TITLE = title;
+        this.URL = URL;
+        this.IMAGE = IMAGE;
         this.id = id;
     }
+
+
 }

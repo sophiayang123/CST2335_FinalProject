@@ -1,6 +1,7 @@
 package com.example.finalproject;
 
 import android.app.Activity;
+import android.content.ContentValues;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
@@ -24,8 +25,16 @@ public class RecipeDatabaseOpenHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("CREATE TABLE " + TABLE_NAME + "( "
                 + COL_ID +" INTEGER PRIMARY KEY AUTOINCREMENT,"
-                + COL_NAME + " TEXT, "+ COL_URL + " TEXT, " + COL_IMAGE  + " Blob)" );
+                + COL_NAME + " TEXT, "+ COL_URL + " TEXT, " + COL_IMAGE  + " BLOB)" );
     }
+
+//    public void addRecipeFa(MyRecipe recipe){
+//        SQLiteDatabase db = this.getWritableDatabase();
+//        ContentValues values = new ContentValues();
+//        values.put("Key_TITLE",MyRecipe.TITLE );
+//        values.put("Key_URL",MyRecipe.URL );
+//        values.put("Key_");
+//    }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {

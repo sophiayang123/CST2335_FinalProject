@@ -19,7 +19,7 @@ public class MainRecipeActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_recipe);
         Button button = (Button) findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -37,6 +37,5 @@ public class MainRecipeActivity extends AppCompatActivity {
     public void openDialog(){
         DialogClass dialog = new DialogClass();
         dialog.show(getSupportFragmentManager(),"dialog box");
-
     }
 }
